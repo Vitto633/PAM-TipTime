@@ -38,8 +38,8 @@ public partial class MainPage : ContentPage
         double valorSlider = Math.Round(TipSlider.Value, 2);
         
         LabelPorcentagemGorjeta.Text = valorSlider.ToString() + "%";
-        double valorGorjeta = valorRefeicao * (valorSlider * 0.01);
-        LabelGorjeta.Text = valorGorjeta.ToString();
+        double valorGorjeta = Math.Round(valorRefeicao * (valorSlider * 0.01), 2);
+        LabelGorjeta.Text = valorGorjeta.ToString() + " R$";
 
         double valorTotal = valorGorjeta + valorRefeicao;
         LabelTotal.Text = valorTotal.ToString();
