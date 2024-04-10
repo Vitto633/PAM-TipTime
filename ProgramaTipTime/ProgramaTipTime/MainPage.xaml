@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ProgramaTipTime.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Padding="30,0"
+            Spacing="25">
+            <Label 
+                Text="Conta"
+                />
+            <Entry
+                Placeholder="Digite aqui o valor da conta"
+                x:Name="TipInput"
+                />
+            <Label
+                Text="Gorjeta"
+                />
+            <Label
+                Text="0"
+                x:Name="LabelGorjeta"
+                />
+            <Label
+                Text="Total"
+                />
+            <Label
+                Text="0"
+                x:Name="LabelTotal"
+                />
+            <Label
+                Text="Porcentagem da gorjeta"
+                />
+            <Label
+                Text="0"
+                x:Name="LabelPorcentagemGorjeta"
+                />
+            <Slider
+                Minimum="0"
+                Maximum="50"
+                x:Name="TipSlider"
+                ValueChanged="TipSlider_OnValueChanged"
+                />
+            
+            <Button
+                Text="15%"
+                x:Name="btnPercent15"
+                Clicked="BtnPercent15_OnClicked"
+                ></Button>
+            <Button
+                Text="30%"
+                x:Name="btnPercent30"
+                Clicked="BtnPercent30_OnClicked"></Button>
+            <Button
+                Text="Arredondar para baixo"
+                x:Name="btnRoundDown"
+                Clicked="BtnRoundDown_OnClicked"></Button>
+            <Button
+                Text="Arredondar para cima"
+                x:Name="btnRoundUp"
+                Clicked="BtnRoundUp_OnClicked"></Button>
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
